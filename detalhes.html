@@ -1,49 +1,26 @@
-<!-- Open Graph -->
-<meta property="og:type" content="product">
-<meta property="og:title" id="og-title" content="">
-<meta property="og:description" id="og-description" content="">
-<meta property="og:image" id="og-image" content="">
-<meta property="og:url" id="og-url" content="">
+<input type="text" placeholder="Buscar produtos...">
+</div>
+</div>
+</header>
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" id="twitter-title" content="">
-<meta name="twitter:description" id="twitter-description" content="">
-<meta name="twitter:image" id="twitter-image" content="">
+<!-- Product Detail Container -->
+<main class="container">
+    <div class="product-detail" id="product-container">
+        <p>Carregando produto...</p>
+    </div>
+</main>
 
-<link rel="stylesheet" href="css/style.css">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-</head>
+<!-- Footer -->
+<footer class="footer">
+    <p id="footer-text">© 2024 GWN Compras - Todos os direitos reservados.</p>
+</footer>
 
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-container">
-            <a href="index.html" class="logo" id="store-logo">GWN Compras</a>
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar produtos...">
-            </div>
-        </div>
-    </header>
+<!-- JSON-LD Schema will be injected here -->
+<script type="application/ld+json" id="product-schema"></script>
 
-    <!-- Product Detail Container -->
-    <main class="container">
-        <div class="product-detail" id="product-container">
-            <p>Carregando produto...</p>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p id="footer-text">© 2024 GWN Compras - Todos os direitos reservados.</p>
-    </footer>
-
-    <!-- JSON-LD Schema will be injected here -->
-    <script type="application/ld+json" id="product-schema"></script>
-
-    <script src="js/supabase-client.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/details.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/details.js"></script>
 </body>
 
 </html>
