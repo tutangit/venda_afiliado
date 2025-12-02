@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; connect-src 'self' https://zwlzfxxdwuyzbubqgatm.supabase.co; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' https://unpkg.com data:;">
+    <title>Configurações - GWN Compras</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="logo-area">
+                <h2>GWN Admin</h2>
+            </div>
+            <nav>
+                <a href="admin-dashboard.html"><i class="ph ph-package"></i> Produtos</a>
+                <a href="admin-config.html" class="active"><i class="ph ph-gear"></i> Configurações</a>
+                <a href="#" onclick="logout()"><i class="ph ph-sign-out"></i> Sair</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header class="top-bar">
+                <h1>Configurações da Loja</h1>
+            </header>
+
+            <div class="table-container">
+                <form id="config-form" style="padding: 2rem;">
+                    <input type="hidden" id="config-id">
+
+                    <div class="form-group">
+                        <label>Nome da Loja</label>
+                        <input type="text" id="nome_loja" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>URL do Logo</label>
+                        <input type="url" id="logo_url" placeholder="https://...">
+                    </div>
+
+                    <div class="form-group">
+                        <label>URL do Banner Principal</label>
+                        <input type="url" id="banner_principal" placeholder="https://...">
+                    </div>
+
+                    <div class="form-group">
+                        <label>URL do Banner Promocional</label>
+                        <input type="url" id="banner_promocao" placeholder="https://...">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Cor Primária</label>
+                            <input type="color" id="cor_primaria" value="#FFF159">
+                        </div>
+                        <div class="form-group">
+                            <label>Cor Secundária</label>
+                            <input type="color" id="cor_secundaria" value="#333333">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Texto do Rodapé</label>
+                        <textarea id="rodape_texto" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary"><i class="ph ph-floppy-disk"></i> Salvar
+                            Configurações</button>
+                    </div>
+
+                    <p id="save-message" style="margin-top: 1rem; text-align: center; color: var(--success);"></p>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/supabase-client.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/admin-config.js"></script>
+    <script>checkAuth();</script>
+</body>
+
+</html>

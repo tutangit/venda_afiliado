@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWN-Compras - Guia de Início</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #FFF159;
+            padding-bottom: 0.5rem;
+        }
+
+        .step {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .step h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        code {
+            background: #333;
+            color: #FFF159;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .link-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .link-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .link-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        ol {
+            margin-left: 2rem;
+            line-height: 1.8;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🛒 GWN-Compras</h1>
+        <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem;">
+            Sistema completo de e-commerce de afiliados Mercado Livre
+        </p>
+
+        <div class="warning">
+            <strong>⚠️ IMPORTANTE:</strong> Este projeto requer configuração do Supabase antes de funcionar.
+            Siga os passos abaixo.
+        </div>
+
+        <h2>📋 Checklist de Configuração</h2>
+
+        <div class="step">
+            <h3>1️⃣ Criar Projeto no Supabase</h3>
+            <ol>
+                <li>Acesse <a href="https://supabase.com" target="_blank">supabase.com</a></li>
+                <li>Clique em "Start your project"</li>
+                <li>Crie uma conta ou faça login</li>
+                <li>Crie um novo projeto (escolha nome, senha e região)</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h3>2️⃣ Executar Script SQL</h3>
+            <ol>
+                <li>No painel do Supabase, vá em <strong>SQL Editor</strong></li>
+                <li>Clique em "New query"</li>
+                <li>Abra o arquivo <code>setup.sql</code> deste projeto</li>
+                <li>Copie todo o conteúdo e cole no editor SQL</li>
+                <li>Clique em "Run" para executar</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h3>3️⃣ Copiar Credenciais</h3>
+            <ol>
+                <li>No Supabase, vá em <strong>Settings > API</strong></li>
+                <li>Copie o <strong>Project URL</strong></li>
+                <li>Copie a <strong>anon public key</strong></li>
+                <li>Abra o arquivo <code>js/supabase-client.js</code></li>
+                <li>Substitua as variáveis com suas credenciais</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h3>4️⃣ Criar Usuário Admin</h3>
+            <ol>
+                <li>No Supabase, vá em <strong>Authentication > Users</strong></li>
+                <li>Clique em "Add user" > "Create new user"</li>
+                <li>Email: <code>admin@gwn.com</code> (ou outro)</li>
+                <li>Senha: escolha uma senha segura</li>
+                <li>Clique em "Create user"</li>
+            </ol>
+        </div>
+
+        <div class="success">
+            <strong>✅ Pronto!</strong> Agora você pode usar o sistema.
+        </div>
+
+        <h2>🚀 Páginas do Sistema</h2>
+
+        <div class="links">
+            <a href="index.html" class="link-card">
+                <h3>🏠 Vitrine</h3>
+                <p>Página pública</p>
+            </a>
+            <a href="admin-login.html" class="link-card">
+                <h3>🔐 Admin Login</h3>
+                <p>Acesso restrito</p>
+            </a>
+            <a href="admin-dashboard.html" class="link-card">
+                <h3>📊 Dashboard</h3>
+                <p>Gerenciar produtos</p>
+            </a>
+            <a href="admin-config.html" class="link-card">
+                <h3>⚙️ Configurações</h3>
+                <p>Personalizar loja</p>
+            </a>
+        </div>
+
+        <h2>📚 Recursos</h2>
+        <ul style="line-height: 2;">
+            <li>📖 <a href="README.md">Documentação Completa</a></li>
+            <li>🗄️ <a href="setup.sql">Script SQL</a></li>
+            <li>🎨 <a href="css/style.css">Estilos Principais</a></li>
+            <li>💻 <a href="js/">Scripts JavaScript</a></li>
+        </ul>
+
+        <h2>🆘 Precisa de Ajuda?</h2>
+        <p>Abra o Console do navegador (F12) para ver mensagens de erro e debug.</p>
+    </div>
+</body>
+
+</html>

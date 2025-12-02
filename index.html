@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; connect-src 'self' https://zwlzfxxdwuyzbubqgatm.supabase.co https://*.supabase.co; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' https://unpkg.com https://cdn.jsdelivr.net data:;">
+    <title id="page-title">GWN Compras - Sua Loja Online</title>
+    <meta name="description" content="Encontre os melhores produtos com os melhores preços">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="store-logo">GWN Compras</a>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar produtos...">
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <div class="banner" id="main-banner">
+        <!-- Banner will be loaded dynamically -->
+    </div>
+
+    <!-- Container Principal -->
+    <main class="container">
+        <!-- Categorias -->
+        <div class="categories" id="categories">
+            <button class="category-btn active" data-category="all">Todos</button>
+        </div>
+
+        <!-- Grid de Produtos -->
+        <div class="products-grid" id="products-grid">
+            <!-- Products will be loaded here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p id="footer-text">© 2024 GWN Compras - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/supabase-client.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

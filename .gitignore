@@ -1,0 +1,17 @@
+# Arquivos de sistema e IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependências (se houver no futuro)
+node_modules/
+
+# Arquivos de ambiente (NUNCA envie para o GitHub)
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
