@@ -116,6 +116,12 @@ function renderCategories(products) {
     const categories = [...new Set(products.map(p => p.categoria).filter(c => c))];
     const container = document.getElementById('categories');
 
+    // Add event listener to the existing "Todos" button
+    const todosBtn = container.querySelector('[data-category="all"]');
+    if (todosBtn) {
+        todosBtn.addEventListener('click', filterByCategory);
+    }
+
     categories.forEach(cat => {
         const btn = document.createElement('button');
         btn.className = 'category-btn';
