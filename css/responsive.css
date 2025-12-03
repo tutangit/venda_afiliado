@@ -124,7 +124,7 @@
 
     /* Products Grid - 2 columns on mobile */
     .products-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
         padding: 0 15px;
     }
@@ -243,7 +243,7 @@
 /* ===========================
    SMALL MOBILE (max-width: 480px)
    =========================== */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
 
     /* Products Grid - Single column for very small screens */
     .products-grid {
