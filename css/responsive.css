@@ -124,7 +124,7 @@
 
     /* Products Grid - 2 columns on mobile */
     .products-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 15px;
         padding: 0 15px;
     }
@@ -179,6 +179,13 @@
     .product-images {
         max-width: 100%;
         width: 100%;
+    }
+
+    .product-images img {
+        max-height: 300px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
     }
 
     .product-info {
