@@ -1,7 +1,16 @@
-/* ===========================
+﻿/* ===========================
    RESPONSIVE DESIGN
    Mobile-First Approach
    =========================== */
+
+/* Button text visibility - Default (desktop) */
+.btn-text-full {
+    display: inline;
+}
+
+.btn-text-short {
+    display: none;
+}
 
 /* ===========================
    TABLET (768px - 1024px)
@@ -286,6 +295,15 @@
     .category-btn {
         padding: 6px 12px;
         font-size: 13px;
+    }
+
+    /* Button text - Show short version on mobile */
+    .btn-text-full {
+        display: none !important;
+    }
+
+    .btn-text-short {
+        display: inline !important;
     }
 }
 

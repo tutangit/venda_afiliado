@@ -103,7 +103,8 @@ function renderProducts(products) {
                             <i class="ph ph-eye"></i>
                         </a>
                         <a href="${escapeHTML(product.afiliado_link)}" target="_blank" class="btn-buy-ml">
-                            Comprar no Mercado Livre
+                            <span class="btn-text-full">Comprar no Mercado Livre</span>
+                            <span class="btn-text-short">Comprar</span>
                         </a>
                     </div>
                 </div>
