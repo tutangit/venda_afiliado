@@ -1,0 +1,399 @@
+/* ===========================
+   RESPONSIVE DESIGN
+   Mobile-First Approach
+   =========================== */
+
+/* ===========================
+   TABLET (768px - 1024px)
+   =========================== */
+@media screen and (max-width: 1024px) {
+
+    /* Header adjustments */
+    .header-container {
+        padding: 0 20px;
+    }
+
+    .search-bar {
+        max-width: 400px;
+    }
+
+    /* Products grid - 3 columns on tablet */
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    /* Categories */
+    .categories {
+        padding: 0 20px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .category-btn {
+        white-space: nowrap;
+    }
+
+    /* Banner */
+    .banner {
+        height: 250px;
+    }
+
+    /* Product Detail */
+    .product-detail {
+        padding: 20px;
+    }
+
+    .product-images {
+        max-width: 100%;
+    }
+}
+
+/* ===========================
+   MOBILE (max-width: 768px)
+   =========================== */
+@media screen and (max-width: 768px) {
+
+    /* Header - Stack elements */
+    .header {
+        padding: 10px 0;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .search-bar input {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    /* Banner - Smaller height */
+    .banner {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .banner img {
+        object-fit: cover;
+    }
+
+    /* Container */
+    .container {
+        padding: 15px;
+    }
+
+    /* Categories - Horizontal scroll */
+    .categories {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .categories::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera */
+    }
+
+    .category-btn {
+        flex-shrink: 0;
+        padding: 8px 16px;
+        font-size: 14px;
+        min-width: auto;
+    }
+
+    /* Products Grid - 2 columns on mobile */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    /* Product Card adjustments */
+    .product-card {
+        padding: 12px;
+    }
+
+    .product-card img {
+        height: 150px;
+    }
+
+    .product-card h3 {
+        font-size: 14px;
+        line-height: 1.3;
+        margin: 10px 0;
+        /* Limit to 2 lines */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .product-price {
+        font-size: 18px;
+        margin: 8px 0;
+    }
+
+    .product-card .btn {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .product-actions {
+        gap: 8px;
+    }
+
+    .icon-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    /* Product Detail Page */
+    .product-detail {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .product-images {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .product-info {
+        width: 100%;
+    }
+
+    .product-info h1 {
+        font-size: 22px;
+    }
+
+    .product-info .product-price {
+        font-size: 28px;
+    }
+
+    .product-info .btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+
+    /* Admin Pages */
+    .admin-container {
+        padding: 15px;
+    }
+
+    .admin-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .admin-header h1 {
+        font-size: 24px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+    }
+}
+
+/* ===========================
+   SMALL MOBILE (max-width: 480px)
+   =========================== */
+@media screen and (max-width: 480px) {
+
+    /* Products Grid - Single column for very small screens */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+
+    .product-card img {
+        height: 200px;
+    }
+
+    .product-card h3 {
+        font-size: 16px;
+    }
+
+    .product-price {
+        font-size: 20px;
+    }
+
+    /* Header */
+    .logo {
+        font-size: 20px;
+    }
+
+    /* Banner */
+    .banner {
+        height: 150px;
+    }
+
+    /* Categories */
+    .category-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+/* ===========================
+   LANDSCAPE ORIENTATION
+   =========================== */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .banner {
+        height: 150px;
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        max-width: 400px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===========================
+   TOUCH DEVICE OPTIMIZATIONS
+   =========================== */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Increase touch targets */
+    .btn,
+    .category-btn,
+    .icon-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Remove hover effects on touch devices */
+    .product-card:hover {
+        transform: none;
+    }
+
+    .btn:hover,
+    .category-btn:hover {
+        transform: none;
+    }
+
+    /* Add active states instead */
+    .btn:active,
+    .category-btn:active {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+
+    .product-card:active {
+        transform: scale(0.98);
+    }
+}
+
+/* ===========================
+   PRINT STYLES
+   =========================== */
+@media print {
+
+    .header,
+    .footer,
+    .categories,
+    .search-bar,
+    .btn,
+    .icon-btn {
+        display: none;
+    }
+
+    .product-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===========================
+   ACCESSIBILITY IMPROVEMENTS
+   =========================== */
+
+/* Focus visible for keyboard navigation */
+@media (prefers-reduced-motion: no-preference) {
+    *:focus-visible {
+        outline: 3px solid #FFD700;
+        outline-offset: 2px;
+    }
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .product-card {
+        border: 2px solid currentColor;
+    }
+
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+    /* Add dark mode styles here if needed */
+}

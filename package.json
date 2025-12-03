@@ -1,0 +1,23 @@
+{
+    "name": "gwn-compras",
+    "version": "1.0.0",
+    "description": "E-commerce de afiliados GWN Compras - Site responsivo com integração Supabase",
+    "main": "index.html",
+    "scripts": {
+        "dev": "npx serve .",
+        "build": "echo 'Static site - no build needed'",
+        "deploy": "vercel --prod"
+    },
+    "keywords": [
+        "ecommerce",
+        "afiliados",
+        "mercado-livre",
+        "supabase",
+        "responsive"
+    ],
+    "author": "GWN Compras",
+    "license": "MIT",
+    "devDependencies": {
+        "serve": "^14.2.1"
+    }
+}
